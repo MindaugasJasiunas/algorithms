@@ -25,7 +25,7 @@ class TreeTest {
          *
          */
 
-        //kuriam sakas ir sakas sakose
+        //creating branches and branches in branches
         TreeBranch branch1=new TreeBranch();
         TreeBranch branch2=new TreeBranch();
         branch2.setBranch(branch1);
