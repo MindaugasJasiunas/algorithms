@@ -11,6 +11,7 @@
     <modules>
         <module>DegreeBetweenClockHands</module>
         <module>TreeDepth</module>
+        <module>ReverseSinglyLinkedList</module>
     </modules>
 
     <build>
