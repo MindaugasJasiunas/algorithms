@@ -53,6 +53,7 @@ public class RomanNumberToArabic {
             if(character!='I' && character!='V' && character!='X' && character!='L' && character!='C' && character!='D' && character!='M'){
                 return false;
             }
+
         }
         return true;
     }
