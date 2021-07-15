@@ -56,4 +56,5 @@ class RomanNumberToArabicTest {
         String result= romanNumberToArabic.convertToRoman(0);
         assertTrue(result.isEmpty());
     }
+
 }
