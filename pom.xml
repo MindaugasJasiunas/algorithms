@@ -12,6 +12,7 @@
         <module>DegreeBetweenClockHands</module>
         <module>TreeDepth</module>
         <module>ReverseSinglyLinkedList</module>
+        <module>RomanianNumbersToArabic</module>
     </modules>
 
     <build>
