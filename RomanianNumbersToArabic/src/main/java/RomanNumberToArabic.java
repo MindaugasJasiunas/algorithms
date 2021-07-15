@@ -15,27 +15,6 @@ public class RomanNumberToArabic {
 //    Symbols V, L, and D cannot appear more than once consecutively.
 //    Do not subtract a number from one that is more than 10 times greater: I may only precede V and X, X may only precede L and C, and C may only precede D and M
 
-    public static void main(String[] args) {
-        System.out.println(new RomanNumberToArabic().convertToArabic("IDDD"));
-        System.out.println("--------");
-        System.out.println(new RomanNumberToArabic().convertToArabic("IIV"));
-        System.out.println("--------");
-        System.out.println(new RomanNumberToArabic().convertToArabic("MMXVIII"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("IIII"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("XXXX"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("MMXXXXVIII"));
-        System.out.println("--------");
-        System.out.println(new RomanNumberToArabic().convertToArabic("IV"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("IX"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("VX"));//-1
-        System.out.println(new RomanNumberToArabic().convertToArabic("XL"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("XC"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("CD"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("CM"));
-        System.out.println(new RomanNumberToArabic().convertToArabic("DM"));//-1
-        System.out.println(new RomanNumberToArabic().convertToArabic("CCCD"));
-    }
-
     public int convertToArabic(String romanText){
         if(checkRomanFormat(romanText)){
             int result=0;
@@ -52,6 +31,20 @@ public class RomanNumberToArabic {
             return result;
         }
         return -1;
+    }
+
+    public String convertToRoman(int arabicNumber){
+        StringBuilder romanText=new StringBuilder();
+        int i=0;
+        while(arabicNumber>0){
+            for(Roman symbol : Roman.getSortedFromBiggest()){
+                while(arabicNumber/symbol.getValue()>=1){
+                    arabicNumber-=symbol.getValue();
+                    romanText.append(symbol);
+                }
+            }
+        }
+        return romanText.toString();
     }
 
     boolean checkRomanFormat(String input){
