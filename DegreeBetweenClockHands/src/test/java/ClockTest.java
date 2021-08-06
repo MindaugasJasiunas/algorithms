@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ClockTest {
-    private final Clock clock=new Clock();
+    private final Clock clock = new Clock();
 
     @DisplayName("getSmallestAngleBetweenClockHands()")
     @Test

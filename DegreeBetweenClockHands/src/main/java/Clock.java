@@ -4,26 +4,27 @@ public class Clock {
 
     /**
      * Method that returns smallest angle between hour and minute hands
-     * @param hour clock hour 0-23
+     *
+     * @param hour   clock hour 0-23
      * @param minute clock minute 0-59
      * @return smallest angle between hour and minute hands in double format OR -1 if invalid input
      */
-    public double getSmallestAngleBetweenClockHands(int hour, int minute){
-        if(hour>23 || hour<0 || minute>59 || minute<0){
+    public double getSmallestAngleBetweenClockHands(int hour, int minute) {
+        if (hour > 23 || hour < 0 || minute > 59 || minute < 0) {
             return -1; //invalid input
         }
-        if(hour>12){
-            hour-=12;  //get 12hour format
+        if (hour > 12) {
+            hour -= 12;  //get 12hour format
         }
 
-        double hourDegrees = (hour*30)+(0.5*minute);
-        double minuteDegrees = minute*6;
-        double angle = minuteDegrees-hourDegrees;
-        if (angle<0){
-            angle*=-1;
+        double hourDegrees = (hour * 30) + (0.5 * minute);
+        double minuteDegrees = minute * 6;
+        double angle = minuteDegrees - hourDegrees;
+        if (angle < 0) {
+            angle *= -1;
         }
-        if(angle>180){
-            angle=360-angle;  //get smallest degrees between
+        if (angle > 180) {
+            angle = 360 - angle;  //get smallest degrees between
         }
         return angle;
     }
