@@ -26,31 +26,31 @@ class TreeTest {
          */
 
         //creating branches and branches in branches
-        TreeBranch branch1=new TreeBranch();
-        TreeBranch branch2=new TreeBranch();
+        TreeBranch branch1 = new TreeBranch();
+        TreeBranch branch2 = new TreeBranch();
         branch2.setBranch(branch1);
 
-        TreeBranch branch3=new TreeBranch();
-        TreeBranch branch4=new TreeBranch();
+        TreeBranch branch3 = new TreeBranch();
+        TreeBranch branch4 = new TreeBranch();
         branch4.setBranch(branch3);
 
-        TreeBranch branch5=new TreeBranch();
-        TreeBranch branch6=new TreeBranch();
+        TreeBranch branch5 = new TreeBranch();
+        TreeBranch branch6 = new TreeBranch();
         branch6.setBranch(branch5);
         branch6.setBranch(branch4);
 
-        TreeBranch branch7=new TreeBranch();
-        TreeBranch branch8=new TreeBranch();
+        TreeBranch branch7 = new TreeBranch();
+        TreeBranch branch8 = new TreeBranch();
         branch8.setBranch(branch7);
 
-        TreeBranch branch9=new TreeBranch();
-        TreeBranch branch10=new TreeBranch();
+        TreeBranch branch9 = new TreeBranch();
+        TreeBranch branch10 = new TreeBranch();
         branch10.setBranch(branch9);
         branch10.setBranch(branch6);
         branch10.setBranch(branch8);
 
         //root branch
-        TreeBranch branch0=new TreeBranch();
+        TreeBranch branch0 = new TreeBranch();
         branch0.setBranch(branch2);
         branch0.setBranch(branch10);
 
@@ -66,7 +66,7 @@ class TreeTest {
     @DisplayName("getDepth() with 1 branch - depth is 1")
     @Test
     void getDepth_oneBranch() {
-        TreeBranch branch1=new TreeBranch();
-        assertEquals(1,tree.getDepth(branch1));
+        TreeBranch branch1 = new TreeBranch();
+        assertEquals(1, tree.getDepth(branch1));
     }
 }
