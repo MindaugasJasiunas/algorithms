@@ -14,14 +14,14 @@ public class ReverseSinglyLinkedList {
     }
 
     public ListNode reverseRecursively(ListNode head) {
-        if(head==null || head.next==null){
+        if (head == null || head.next == null) {
             //head.prev=null;  // additional line if we would use double linked
             return head;
         }
-        ListNode reversedListNode= reverseRecursively(head.next);
-        head.next.next=head; // next element's next element will be this head
+        ListNode reversedListNode = reverseRecursively(head.next);
+        head.next.next = head; // next element's next element will be this head
         //head.next.next.prev=head.next;  // additional line if we would use double linked
-        head.next=null; //next element will be null (otherwise infinite loop when returning at the start of a list)
+        head.next = null; //next element will be null (otherwise infinite loop when returning at the start of a list)
         return reversedListNode;
     }
 }
